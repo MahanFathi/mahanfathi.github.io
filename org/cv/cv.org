@@ -4,16 +4,16 @@
 
 
 * Education
-*** Montreal Institute for Learning Algorithms: M.Sc. [Sep. 2020]
+*** Mila: Montreal Institute for Learning Algorithms (M.Sc.) [2020-22]
 #+begin_verse
 University of Montreal, School of Computer Science. Advised by Prof. [[http://pierrelucbacon.com/][Pierre-Luc Bacon]].
 #+end_verse
-*** Sharif University of Technology [Sep. 2017. GPA: 3.88/4.0]
+*** Sharif University of Technology (B.Sc.) [2013-17. GPA: 3.88/4.0]
 #+begin_verse
 School of Mechanical Engineering, Dynamics and Control.
 [[http://www.openthesis.org/document/view/603263_0.pdf][Bachelor Thesis]]: Nonlinear Control of a Ballbot, with Focus on Sample-Based Motion Planning Algorithms.
 #+end_verse
-*** NODET: High School [Jun. 2013. GPA: 19.3/20.0]
+*** NODET: High School [2009-13. GPA: 19.3/20.0]
 #+begin_verse
 National Organization for Development of Exceptional Talents, Mathematics and Physics.
 #+end_verse
@@ -46,10 +46,15 @@ ISME2016: 24th Annual International Conference on Mechanical Engineering.
 *** [[github:MahanFathi/Model-Based-RL][Model-Based Policy Gradients]] [Jul. to Sep. 2019]
 #+begin_verse
  Motions emerge from directly back-proping into policy networks using reparam trick and physics gradients calculated in MuJoCo.
+ To backprop into stochastic policies, given an unknown model, one has to use the REINFORCE theory, to be able to calculate the gradients by sampling the environment. These methods usually have high variance, so baselines and value/advantage functions were introduced. Another way to backpropagate into your policy network is to use the “reparameterization trick” as in VAEs, but they entail knowledge of upstream gradients, and hence a known model. The policy gradients calculated w/ the reparam trick are often much lower in variance, so one can go wo/ baselines and value networks. This project puts it all together: computation graph of policy and dynamics, upstream gradients from MuJoCo dynamics and rewards, reparam trick, and optimization.
 #+end_verse
 *** [[github:MahanFathi/Unity2OpenSim][Unity2OpenSim]] [Jun. to Jul. 2019]
 #+begin_verse
 A corss-platform painless pipeline to perform Inverse Kinematics/Dynamics of OpenSim on Unity models and motions.
+#+end_verse
+*** [[https://github.com/MahanFathi/iLQG-MuJoCo][MPC of MuJoCo Agents Using iLQG]] [Dec. 2017 to Jan. 2018]
+#+begin_verse
+Inspired by the work of Todorov et al., implemented a fast Iterative LQG solver that reliably commands agents, such as the Hopper, in MPC mode, in presence of external forces.
 #+end_verse
 *** Motion Mimic [Nov. 2017 to Jan. 2018]
 #+begin_verse
@@ -94,6 +99,31 @@ Among the biggest Iranian tech companies, TAP30 is a ride-hailing platform with 
 -----
 
 * Projects
+*** AR Navigation [Jul. 2019 _Ongoing_]
+#+begin_verse
+Providing users with an Augmented Reality driven experience for navigation.
+The team tackled the problem of finding the near-optimal vanishing point for a sequence of input images and depiction of graphical instructions accordingly, from OpenGL scratch. For now, the system is embedded in Balad running on Android phones.
+#+end_verse
+*** [[https://github.com/MahanFathi/OBJET][OBJET: A Computer Vision Graphical Sandbox]] [Feb. to Mar. 2020]
+#+begin_verse
+OBJET, is a graphical environment, developed in C++/OpenGL and accessible in Python via SWIG, to cater to the data needs of one willing to conduct research on computer vision in such domains.
+Load your own objects in a room, take a snapshot of the viewport, from the viewpoint of the customizable camera, and load it to python. This gives you the ability to create data on-the-fly, in your python data loader.
+#+end_verse
+*** Road Extraction from Satellite Imagery [Jan. to Mar. 2020]
+#+begin_verse
+Extraction of the graph of roads from aerial images, via image segmentation and a shitload of post-processing.
+#+end_verse
+*** Automated Face, Plate Number, Etc. Censorship of Balad’s Street Imagery via YOLOv3 [Nov. 2019 to Jan. 2020]
+#+begin_verse
+Significantly enhanced the former RCNN driven approach in terms of performance.
+#+end_verse
+*** Object Extraction from Satellite Imagery [Dec. 2019 to Jan. 2020]
+Extraction of building boundaries, parks, bridges, crosswalks, parking lots, etc. from satellite imagery.
+*** Automated Tagging of Crowd-sourced Images [Nov. to Dec. 2019]
+#+begin_verse
+A service responsible for automated tagging of crowd-sourced images with labels such as #indoor/outdoor, #menu, #food, #persons_posing, etc.
+#+end_verse
+*** Extraction of Speed Bumps and Traffic Lights from GPS Logs [Dec. 2019]
 *** Live Traffic [Mar. 2019]
 #+begin_verse
 Design, implementation, optimization, deployment, maintenance, and storage of real-time user GPS data, single-handedly. The service assigns a traffic metric to map road segments, which are then used by Navigation and ETA services.
@@ -101,6 +131,10 @@ Design, implementation, optimization, deployment, maintenance, and storage of re
 *** Street Imagery Sensitive Content Censorship [Feb. 2019]
 #+begin_verse
 YOLOv3 is the core of this fast censor network, responsible for blurring of faces and licence plates in street images.
+#+end_verse
+*** RNN ETA [Feb. to Mar. 2019]
+#+begin_verse
+Reducing Balad's ETA MSE by a factor of 2, using a segment-based LSTM, trained on GPS logs.
 #+end_verse
 *** [[https://blog.usejournal.com/collecting-a-nations-points-of-interest-computer-vision-to-the-rescue-41026053bdf6][Detection and Tracking of Points of Interest]] [Nov. 2018 Jan. 2019]
 #+begin_verse
@@ -141,7 +175,7 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 #+end_verse
 *** Other
 #+begin_verse
-- Linux, Docker, Django, Node.js, L A TEX, C, \\
+- Linux, Docker, Django, Node.js, LaTeX, C, \\
   Mathematica, Matlab, Simulink, Maple, etc.
 - Can’t live w/o Arch, Emacs, and i3
 - Expert pencil artist and acoustic guitar fanatic
@@ -152,13 +186,14 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 * Coursework
 *** Machine Learning
 #+begin_verse
-+ Berkeley CS 294
++ Berkeley's CS294: Deep RL by Sergey Levine
 + David Silver's UCL Course of RL
-+ Stanford's CS 231n
++ Stanford's CS231n: CNNs for Visual Recognition
 #+end_verse
 *** Control Theory and Robotics
 #+begin_verse
 + Underactuated Robotics by Russ Tedrake
++ Berkeley's CS287: Advanced Robotics by Pieter Abbeel
 + Programming for Robotics - ROS (ETH)
 + Artificial Intelligence for Robotics (Udacity)
 #+end_verse

@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-03-15 Sun 19:59 -->
+<!-- 2020-04-09 Thu 02:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CV: Mahan Fathi</title>
@@ -266,26 +266,26 @@ for the JavaScript code in this tag.
 <h2 id="orgb25a607">Education</h2>
 <div class="outline-text-2" id="text-orgb25a607">
 </div>
-<div id="outline-container-org651adc5" class="outline-4">
-<h4 id="org651adc5">Montreal Institute for Learning Algorithms: M.Sc. [Sep. 2020]</h4>
-<div class="outline-text-4" id="text-org651adc5">
+<div id="outline-container-orge008f5c" class="outline-4">
+<h4 id="orge008f5c">Mila: Montreal Institute for Learning Algorithms (M.Sc.) [2020-22]</h4>
+<div class="outline-text-4" id="text-orge008f5c">
 <p class="verse">
 University of Montreal, School of Computer Science. Advised by Prof. <a href="http://pierrelucbacon.com/">Pierre-Luc Bacon</a>.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org277a033" class="outline-4">
-<h4 id="org277a033">Sharif University of Technology [Sep. 2017. GPA: 3.88/4.0]</h4>
-<div class="outline-text-4" id="text-org277a033">
+<div id="outline-container-orge83f200" class="outline-4">
+<h4 id="orge83f200">Sharif University of Technology (B.Sc.) [2013-17. GPA: 3.88/4.0]</h4>
+<div class="outline-text-4" id="text-orge83f200">
 <p class="verse">
 School of Mechanical Engineering, Dynamics and Control.<br />
 <a href="http://www.openthesis.org/document/view/603263_0.pdf">Bachelor Thesis</a>: Nonlinear Control of a Ballbot, with Focus on Sample-Based Motion Planning Algorithms.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org00eaf05" class="outline-4">
-<h4 id="org00eaf05">NODET: High School [Jun. 2013. GPA: 19.3/20.0]</h4>
-<div class="outline-text-4" id="text-org00eaf05">
+<div id="outline-container-org26c3f85" class="outline-4">
+<h4 id="org26c3f85">NODET: High School [2009-13. GPA: 19.3/20.0]</h4>
+<div class="outline-text-4" id="text-org26c3f85">
 <p class="verse">
 National Organization for Development of Exceptional Talents, Mathematics and Physics.<br />
 </p>
@@ -351,6 +351,7 @@ ISME2016: 24th Annual International Conference on Mechanical Engineering.<br />
 <div class="outline-text-4" id="text-org80738b5">
 <p class="verse">
 Motions emerge from directly back-proping into policy networks using reparam trick and physics gradients calculated in MuJoCo.<br />
+To backprop into stochastic policies, given an unknown model, one has to use the REINFORCE theory, to be able to calculate the gradients by sampling the environment. These methods usually have high variance, so baselines and value/advantage functions were introduced. Another way to backpropagate into your policy network is to use the “reparameterization trick” as in VAEs, but they entail knowledge of upstream gradients, and hence a known model. The policy gradients calculated w/ the reparam trick are often much lower in variance, so one can go wo/ baselines and value networks. This project puts it all together: computation graph of policy and dynamics, upstream gradients from MuJoCo dynamics and rewards, reparam trick, and optimization.<br />
 </p>
 </div>
 </div>
@@ -359,6 +360,14 @@ Motions emerge from directly back-proping into policy networks using reparam tri
 <div class="outline-text-4" id="text-orgf443ab7">
 <p class="verse">
 A corss-platform painless pipeline to perform Inverse Kinematics/Dynamics of OpenSim on Unity models and motions.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org5c45868" class="outline-4">
+<h4 id="org5c45868"><a href="https://github.com/MahanFathi/iLQG-MuJoCo">MPC of MuJoCo Agents Using iLQG</a> [Dec. 2017 to Jan. 2018]</h4>
+<div class="outline-text-4" id="text-org5c45868">
+<p class="verse">
+Inspired by the work of Todorov et al., implemented a fast Iterative LQG solver that reliably commands agents, such as the Hopper, in MPC mode, in presence of external forces.<br />
 </p>
 </div>
 </div>
@@ -445,6 +454,59 @@ Among the biggest Iranian tech companies, TAP30 is a ride-hailing platform with 
 <h2 id="org0f60660">Projects</h2>
 <div class="outline-text-2" id="text-org0f60660">
 </div>
+<div id="outline-container-org43e8164" class="outline-4">
+<h4 id="org43e8164">AR Navigation [Jul. 2019 _Ongoing_]</h4>
+<div class="outline-text-4" id="text-org43e8164">
+<p class="verse">
+Providing users with an Augmented Reality driven experience for navigation.<br />
+The team tackled the problem of finding the near-optimal vanishing point for a sequence of input images and depiction of graphical instructions accordingly, from OpenGL scratch. For now, the system is embedded in Balad running on Android phones.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orge9d3c51" class="outline-4">
+<h4 id="orge9d3c51"><a href="https://github.com/MahanFathi/OBJET">OBJET: A Computer Vision Graphical Sandbox</a> [Feb. to Mar. 2020]</h4>
+<div class="outline-text-4" id="text-orge9d3c51">
+<p class="verse">
+OBJET, is a graphical environment, developed in C++/OpenGL and accessible in Python via SWIG, to cater to the data needs of one willing to conduct research on computer vision in such domains.<br />
+Load your own objects in a room, take a snapshot of the viewport, from the viewpoint of the customizable camera, and load it to python. This gives you the ability to create data on-the-fly, in your python data loader.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc17c34d" class="outline-4">
+<h4 id="orgc17c34d">Road Extraction from Satellite Imagery [Jan. to Mar. 2020]</h4>
+<div class="outline-text-4" id="text-orgc17c34d">
+<p class="verse">
+Extraction of the graph of roads from aerial images, via image segmentation and a shitload of post-processing.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org02d696f" class="outline-4">
+<h4 id="org02d696f">Automated Face, Plate Number, Etc. Censorship of Balad’s Street Imagery via YOLOv3 [Nov. 2019 to Jan. 2020]</h4>
+<div class="outline-text-4" id="text-org02d696f">
+<p class="verse">
+Significantly enhanced the former RCNN driven approach in terms of performance.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org1162539" class="outline-4">
+<h4 id="org1162539">Object Extraction from Satellite Imagery [Dec. 2019 to Jan. 2020]</h4>
+<div class="outline-text-4" id="text-org1162539">
+<p>
+Extraction of building boundaries, parks, bridges, crosswalks, parking lots, etc. from satellite imagery.
+</p>
+</div>
+</div>
+<div id="outline-container-org53c3d58" class="outline-4">
+<h4 id="org53c3d58">Automated Tagging of Crowd-sourced Images [Nov. to Dec. 2019]</h4>
+<div class="outline-text-4" id="text-org53c3d58">
+<p class="verse">
+A service responsible for automated tagging of crowd-sourced images with labels such as #indoor/outdoor, #menu, #food, #persons<sub>posing</sub>, etc.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org3025b84" class="outline-4">
+<h4 id="org3025b84">Extraction of Speed Bumps and Traffic Lights from GPS Logs [Dec. 2019]</h4>
+</div>
 <div id="outline-container-orgc9153c7" class="outline-4">
 <h4 id="orgc9153c7">Live Traffic [Mar. 2019]</h4>
 <div class="outline-text-4" id="text-orgc9153c7">
@@ -458,6 +520,14 @@ Design, implementation, optimization, deployment, maintenance, and storage of re
 <div class="outline-text-4" id="text-org2dc94b1">
 <p class="verse">
 YOLOv3 is the core of this fast censor network, responsible for blurring of faces and licence plates in street images.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgfad4460" class="outline-4">
+<h4 id="orgfad4460">RNN ETA [Feb. to Mar. 2019]</h4>
+<div class="outline-text-4" id="text-orgfad4460">
+<p class="verse">
+Reducing Balad&rsquo;s ETA MSE by a factor of 2, using a segment-based LSTM, trained on GPS logs.<br />
 </p>
 </div>
 </div>
@@ -530,7 +600,7 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 <h4 id="orgcf79e18">Other</h4>
 <div class="outline-text-4" id="text-orgcf79e18">
 <p class="verse">
-- Linux, Docker, Django, Node.js, L A TEX, C, <br />
+- Linux, Docker, Django, Node.js, LaTeX, C, <br />
 &#xa0;&#xa0;Mathematica, Matlab, Simulink, Maple, etc.<br />
 - Can’t live w/o Arch, Emacs, and i3<br />
 - Expert pencil artist and acoustic guitar fanatic<br />
@@ -549,9 +619,9 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 <h4 id="orgabbbb7d">Machine Learning</h4>
 <div class="outline-text-4" id="text-orgabbbb7d">
 <p class="verse">
-+ Berkeley CS 294<br />
++ Berkeley&rsquo;s CS294: Deep RL by Sergey Levine<br />
 + David Silver&rsquo;s UCL Course of RL<br />
-+ Stanford&rsquo;s CS 231n<br />
++ Stanford&rsquo;s CS231n: CNNs for Visual Recognition<br />
 </p>
 </div>
 </div>
@@ -560,6 +630,7 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 <div class="outline-text-4" id="text-orgc854fe2">
 <p class="verse">
 + Underactuated Robotics by Russ Tedrake<br />
++ Berkeley&rsquo;s CS287: Advanced Robotics by Pieter Abbeel<br />
 + Programming for Robotics - ROS (ETH)<br />
 + Artificial Intelligence for Robotics (Udacity)<br />
 </p>
@@ -642,7 +713,7 @@ Introduction to Mechanics, Electrodynamics and Differential Equations.<br />
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mahan Fathi Mahan Fathi</p>
-<p class="date">Created: 2020-03-15 Sun 19:59</p>
+<p class="date">Created: 2020-04-09 Thu 02:10</p>
 </div>
 </body>
 </html>
