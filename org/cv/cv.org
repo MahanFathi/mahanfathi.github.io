@@ -226,12 +226,12 @@ Introduction to Mechanics, Electrodynamics and Differential Equations.
 -----
 
 * Interests
-*** Legged Locomotion
-#+begin_verse
-+ Bipedal Locomotion
-+ Planning via Terrain Perception
-+ Agile Gaits for Quadrupeds
-+ Hierarchical Planning and Control
-#+end_verse
-*** Autonomous Driving
-*** Kinematic Character Animation
+|------------------------------------+-------------------------+------------------------------+-------------------|
+| *Robotics and Character Animation* | *Machine Learning*      | *Software Engineering*       | *Cool Stuff*      |
+|------------------------------------+-------------------------+------------------------------+-------------------|
+| Bipedal Locomotion                 | Reinforcement Learning  | Backend Development          | Game Development  |
+| Agile Gaits for Quadrupeds         | Optimization Algorithms | Machine Learning Engineering | Augmented Reality |
+| Hierarchical Planning and Control  | Computer Vision         | Microservices                | Virtual Reality   |
+| Kinematic Character Animation      | Computer Graphics       | Beautiful Architectures      | Exotic Editors    |
+| Self-driving cars                  | Rethinking Neural Nets  | C/C++!                       | Free Software     |
+|------------------------------------+-------------------------+------------------------------+-------------------|
