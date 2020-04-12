@@ -89,11 +89,11 @@ I worked at Navigation team at Balad on route planning, traffic prediction, and 
 #+end_verse
 *** Senior Backend Developer at [[https://tapsi.ir/][TAPSI]] [May. to Oct. 2018]
 #+begin_verse
-I was a member of the Dispatch/Pricing team at Tap30, which is somehow the heart of any ride-hailing platform. Whenever a ride request is submitted, we are the invisible hands behind, connecting riders and drivers.
+I was a member of the Dispatch/Pricing team at TAPSI, which is somehow the heart of any ride-hailing platform. Whenever a ride request is submitted, we are the invisible hands behind, connecting riders and drivers.
 #+end_verse
 *** Data Scientist at TAPSI [Feb. to May. 2018]
 #+begin_verse
-Among the biggest Iranian tech companies, TAP30 is a ride-hailing platform with millions of monthly active users.
+Among the biggest Iranian tech companies, TAPSI is a ride-hailing platform with millions of monthly active users.
 #+end_verse
 
 -----
@@ -146,7 +146,7 @@ Inspired by the work of NVIDIA on DAVE-2, in a team of 6, at the 7th Hackathon o
 #+end_verse
 *** Location Service Rewrite [Oct. 2018]
 #+begin_verse
-Reducing the response time of TAP30’s main bottleneck by a crazy factor. We made heavy use of Lua and Redis.
+Reducing the response time of TAPSI’s main bottleneck by a crazy factor. We made heavy use of Lua and Redis.
 #+end_verse
 *** Semi-concurrent Dispatch Algorithm [May. 2018 Aug. 2018]
 #+begin_verse
