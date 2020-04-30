@@ -1,0 +1,55 @@
+#+AUTHOR:    Mahan Fathi
+#+EMAIL:     mahan0fathi@gmail.com
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [american]
+# Setup tikz package for both LaTeX and HTML export:
+#+LATEX_HEADER: \usepackage{tikz}
+#+PROPERTY: header-args:latex+ :packages '(("" "tikz"))
+#+PROPERTY: header-args:latex+ :imagemagick (by-backend (latex nil) (t "yes"))
+#+PROPERTY: header-args:latex+ :exports results :fit yes
+
+* Intro
+
+#+name: trajectory
+#+header: :fit yes :iminoptions -density 200 -resample 80x80
+#+header: :file (by-backend (latex "trajectory.tikz") (t "trajectory.png"))
+#+begin_src latex :results raw file
+\begin{tikzpicture}
+
+\node (n) at (0, 0) {$x_n^*$};
+\node (n-1) at (4, 1) {$x_{n-1}^*$};
+\node (n-2) at (8, 0) {$x_{n-2}^*$};
+\node (dots_-) at (11, 0.5) {};
+\node (dots) at (12, 0.5) {.  .  .};
+\node (dots_+) at (13, 0.5) {};
+\node (2) at (16, 1) {$x_2^*$};
+\node (1) at (20, 0) {$x_1^*$};
+\node (0) at (24, 1) {$x_0^*$};
+
+\node (un) at (2, 0.5) [anchor=north] {$u_n^*$};
+\node (un-1) at (6, 0.5) [anchor=south] {$u_{n-1}^*$};
+\node (u2) at (18, 0.5) [anchor=north] {$u_2^*$};
+\node (u1) at (22, 0.5) [anchor=south] {$u_1^*$};
+
+\draw[->]
+  (n) edge (n-1) (n-1) edge (n-2) (n-2) edge (dots_-)
+  (dots_+) edge (2) (2) edge (1) (1) edge (0)
+;
+
+\end{tikzpicture}
+#+end_src
+
+#+attr_latex: :float nil :width ""
+#+results: trajectory
+[[file:trajectory.png]]
+
+
+* setup :noexport:
+
+#+name: setup
+#+begin_src emacs-lisp :results silent :exports none
+  (defmacro by-backend (&rest body)
+    `(case (if (boundp 'backend) (org-export-backend-name backend) nil) ,@body))
+#+end_src
+# for setting up eval: (org-sbe "setup")

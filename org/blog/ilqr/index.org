@@ -1,0 +1,11 @@
+#+TITLE:     Mahan Fathi
+#+SUBTITLE:  Notes on iLQR
+#+AUTHOR:    Mahan Fathi
+#+EMAIL:     mahan0fathi@gmail.com
+
+#+LANGUAGE:  en
+#+OPTIONS: d:nil num:nil toc:nil ltoc:above view:info mouse:underline
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../stylesheet.css" />
+
+
+#+INCLUDE: ilqr.org

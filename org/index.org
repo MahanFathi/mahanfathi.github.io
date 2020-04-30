@@ -24,3 +24,5 @@
 # | [[https://www.instagram.com/8iteme/][Instagram]] | [[https://join.skype.com/invite/i9CZ1i4Jegmb][Skype]]    |
 # | [[https://www.reddit.com/u/mahanfathi][Reddit]]    | [[https://discord.gg/CdC5BjZ][Discord]]  |
 # | [[https://www.facebook.com/people/Mahan-Fathi/100005765565367][Facebook]]  |          |
+
+* [[file:blog/index.org][Blog]]

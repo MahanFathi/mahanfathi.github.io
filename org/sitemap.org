@@ -1,6 +1,11 @@
 #+TITLE: 
 
 - [[file:index.org][Mahan Fathi]]
+- blog
+  - [[file:blog/index.org][index]]
+  - ilqr
+    - [[file:blog/ilqr/ilqr.org][Notes on iLQR]]
+    - [[file:blog/ilqr/index.org][index]]
 - cv
-  - [[file:cv/index.org][Mahan Fathi]]
-  - [[file:cv/cv.org][Mahan Fathi]]
+  - [[file:cv/cv.org][CV: Mahan Fathi]]
+  - [[file:cv/index.org][index]]

@@ -1,5 +1,5 @@
 #+TITLE:     Mahan Fathi
-#+SUBTITLE:  Curriculum Vitae
+#+SUBTITLE:  Blog
 #+AUTHOR:    Mahan Fathi
 #+EMAIL:     mahan0fathi@gmail.com
 
@@ -17,4 +17,5 @@
 
 -----
 
-#+INCLUDE: cv.org
+* Posts
+** [[file:ilqr/index.org][Notes on iLQR]]

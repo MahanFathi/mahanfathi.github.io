@@ -1,4 +1,3 @@
-#+TITLE:     CV: Mahan Fathi
 #+AUTHOR:    Mahan Fathi
 #+EMAIL:     mahan0fathi@gmail.com
 
