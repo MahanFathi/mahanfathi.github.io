@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-01 Fri 22:23 -->
+<!-- 2020-05-01 Fri 22:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mahan Fathi</title>
@@ -564,14 +564,14 @@ an official code sample can be found <a href="http://www.mujoco.org/book/source/
 </p>
 
 \begin{equation}
-  A =
+  A_{2nv, 2nv} =
     \begin{bmatrix}
-      I_{2nv, 2nv} & I_{2nv, 2nv} * \Delta t \\
+      I_{nv, nv} & I_{nv, nv} * \Delta t \\
       \frac{\partial qacc}{\partial q} * \Delta t &
-      I_{2nv, 2nv} + \frac{\partial qacc}{\partial qvel} * \Delta t
+      I_{nv, nv} + \frac{\partial qacc}{\partial qvel} * \Delta t
     \end{bmatrix}
   ,
-  B =
+  B_{2nv, nu} =
     \begin{bmatrix}
       0_{nv, nu} \\
       \frac{\partial qacc}{\partial ctrl} * \Delta t
@@ -621,7 +621,7 @@ We also don&rsquo;t need to worry about \(V\) and \(v\), since differentiation z
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mahan Fathi Han Fathi</p>
-<p class="date">Created: 2020-05-01 Fri 22:23</p>
+<p class="date">Created: 2020-05-01 Fri 22:26</p>
 </div>
 </body>
 </html>

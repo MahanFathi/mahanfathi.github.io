@@ -233,14 +233,14 @@ an official code sample can be found [[http://www.mujoco.org/book/source/derivat
 $\frac{\partial qacc}{\partial qvel}$, and $\frac{\partial qacc}{\partial ctrl} you can construct the $A$ and $B$ matrices:
 
 \begin{equation}
-  A =
+  A_{2nv, 2nv} =
     \begin{bmatrix}
-      I_{2nv, 2nv} & I_{2nv, 2nv} * \Delta t \\
+      I_{nv, nv} & I_{nv, nv} * \Delta t \\
       \frac{\partial qacc}{\partial q} * \Delta t &
-      I_{2nv, 2nv} + \frac{\partial qacc}{\partial qvel} * \Delta t
+      I_{nv, nv} + \frac{\partial qacc}{\partial qvel} * \Delta t
     \end{bmatrix}
   ,
-  B =
+  B_{2nv, nu} =
     \begin{bmatrix}
       0_{nv, nu} \\
       \frac{\partial qacc}{\partial ctrl} * \Delta t
