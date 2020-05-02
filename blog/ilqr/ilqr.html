@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-01 Fri 22:26 -->
+<!-- 2020-05-02 Sat 13:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -330,9 +330,6 @@ problem can be solved using many tools, including dynamic programming, e.g. valu
 following at each step:
 </p>
 
-<p>
-#+NAME eqndp
-</p>
 \begin{equation}
 \label{eq:dp}
 \min_{u_n} \quad J_{n-1}^*(f(x_n, u_n)) + g(x_n, u_n)
@@ -563,12 +560,12 @@ quite easy to reach:
 
 <p>
 To get the Hessians, we also don&rsquo;t going to bother us too much and we simply use the Jacobian approximation, i.e.
-\(H = J^T J\). Find a descent explanation <a href="https://math.stackexchange.com/questions/2349026/why-is-the-approximation-of-hessian-jtj-reasonable">here</a>.
+\(H \approx J^T J\). Find a descent explanation <a href="https://math.stackexchange.com/questions/2349026/why-is-the-approximation-of-hessian-jtj-reasonable">here</a>.
 </p>
 
 \begin{equation}
-  \frac{\partial^2 g}{\partial z^2} = (\frac{\partial g}{\partial z})^T (\frac{\partial g}{\partial z}) \\
-  \frac{\partial^2 g}{\partial \nu^2} = (\frac{\partial g}{\partial \nu})^T (\frac{\partial g}{\partial \nu})
+  \frac{\partial^2 g}{\partial z^2} \approx (\frac{\partial g}{\partial z})^T (\frac{\partial g}{\partial z}) \\
+  \frac{\partial^2 g}{\partial \nu^2} \approx (\frac{\partial g}{\partial \nu})^T (\frac{\partial g}{\partial \nu})
 \end{equation}
 
 <p>
@@ -580,7 +577,7 @@ We also don&rsquo;t need to worry about \(V\) and \(v\), since differentiation z
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Han Fathi</p>
-<p class="date">Created: 2020-05-01 Fri 22:26</p>
+<p class="date">Created: 2020-05-02 Sat 13:38</p>
 </div>
 </body>
 </html>

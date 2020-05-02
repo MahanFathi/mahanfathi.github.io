@@ -31,20 +31,20 @@ in the performance of the algorithm.
 #+begin_src latex :results raw file
 \begin{tikzpicture}
 
-\node (n) at (0, 0) {$x_n^*$};
-\node (n-1) at (4, 1) {$x_{n-1}^*$};
-\node (n-2) at (8, 0) {$x_{n-2}^*$};
+\node (n) at (0, 0) {\LARGE $x_n^*$};
+\node (n-1) at (4, 1) {\LARGE $x_{n-1}^*$};
+\node (n-2) at (8, 0) {\LARGE $x_{n-2}^*$};
 \node (dots_-) at (11, 0.5) {};
-\node (dots) at (12, 0.5) {.  .  .};
+\node (dots) at (12, 0.5) {\LARGE .  .  .};
 \node (dots_+) at (13, 0.5) {};
-\node (2) at (16, 1) {$x_2^*$};
-\node (1) at (20, 0) {$x_1^*$};
-\node (0) at (24, 1) {$x_0^*$};
+\node (2) at (16, 1) {\LARGE $x_2^*$};
+\node (1) at (20, 0) {\LARGE $x_1^*$};
+\node (0) at (24, 1) {\LARGE $x_0^*$};
 
-\node (un) at (2, 0.5) [anchor=north] {$u_n^*$};
-\node (un-1) at (6, 0.5) [anchor=south] {$u_{n-1}^*$};
-\node (u2) at (18, 0.5) [anchor=north] {$u_2^*$};
-\node (u1) at (22, 0.5) [anchor=south] {$u_1^*$};
+\node (un) at (2, 0.5) [anchor=north] {\LARGE $u_n^*$};
+\node (un-1) at (6, 0.5) [anchor=south] {\LARGE $u_{n-1}^*$};
+\node (u2) at (18, 0.5) [anchor=north] {\LARGE $u_2^*$};
+\node (u1) at (22, 0.5) [anchor=south] {\LARGE $u_1^*$};
 
 \draw[->]
   (n) edge (n-1) (n-1) edge (n-2) (n-2) edge (dots_-)
@@ -79,7 +79,6 @@ problem setting and $J_0(x) = J_0^*(x)$, since there are no actions left to "opt
 problem can be solved using many tools, including dynamic programming, e.g. value iteration etc, which solve the
 following at each step:
 
-#+NAME eqndp
 \begin{equation}
 \label{eq:dp}
 \min_{u_n} \quad J_{n-1}^*(f(x_n, u_n)) + g(x_n, u_n)
@@ -267,11 +266,11 @@ quite easy to reach:
 \end{equation}
 
 To get the Hessians, we also don't going to bother us too much and we simply use the Jacobian approximation, i.e.
-$H = J^T J$. Find a descent explanation [[https://math.stackexchange.com/questions/2349026/why-is-the-approximation-of-hessian-jtj-reasonable][here]].
+$H \approx J^T J$. Find a descent explanation [[https://math.stackexchange.com/questions/2349026/why-is-the-approximation-of-hessian-jtj-reasonable][here]].
 
 \begin{equation}
-  \frac{\partial^2 g}{\partial z^2} = (\frac{\partial g}{\partial z})^T (\frac{\partial g}{\partial z}) \\
-  \frac{\partial^2 g}{\partial \nu^2} = (\frac{\partial g}{\partial \nu})^T (\frac{\partial g}{\partial \nu})
+  \frac{\partial^2 g}{\partial z^2} \approx (\frac{\partial g}{\partial z})^T (\frac{\partial g}{\partial z}) \\
+  \frac{\partial^2 g}{\partial \nu^2} \approx (\frac{\partial g}{\partial \nu})^T (\frac{\partial g}{\partial \nu})
 \end{equation}
 
 We also don't need to worry about $V$ and $v$, since differentiation zeros out the unwanted terms.
