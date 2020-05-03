@@ -86,11 +86,11 @@ following at each step:
 
 However, solving for an arbitrary optimization problem at each step is computationally costly and unmanageable.
 The thing about LQR that makes it so popular is that it makes dynamic programming recursion painless, by applying
-the same analytical update at each step. This update is valid for a system with linear transition model and quadratic
+the same analytical update at each step. This update is valid for a system with linear transition model and linear-quadratic
 step-cost:
 
 \begin{equation*}
-x_{i-1} = A x_i + B u_i \\
+x_{i-1} = c + A x_i + B u_i \\
 g(x, u) = x^T Q x + q x + u^T R u + r u
 \end{equation*}
 
@@ -101,7 +101,7 @@ Eventually, deploying LQ simplifications in equation (\ref{eq:dp}) yields:
 \min_{u_n} \quad    (x_{n-1}^T V_{n-1} x_{n-1} + v_{n-1} x_{n-1}) +
                     (x_n^T Q x_n + q x_n) +
                     (u_n^T R u_n + r u_n) \\
-\text{where:} \quad x_{n-1} = A x_n + B u_n
+\text{where:} \quad x_{n-1} = c + A x_n + B u_n
 \end{equation}
 
 It is assumed, correctly, that the optimal cost to go maintains an LQ shape throughout the optimization --
@@ -109,15 +109,15 @@ we also need to remember to make sure of that. By setting the gradient of $u_n$ 
 the optimal control input:
 
 \begin{equation}
-  \nabla_u [...] = 2 (A x + B u)^T V B + v B + 2 u^T R = 0 \\
-  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + B^T v^T = 0
+  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R = 0 \\
+  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T = 0
 \end{equation}
 
 So the control input is feedback-ish function of $x_n$:
 
 \begin{equation}
 \label{eq:feedback}
-  u_n = (-(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A) x + -(2 B^T V_{n-1} B + 2 R)^{-1} B^T \\
+  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c) \\
   u_n = K_n x_n + k_n
 \end{equation}
 
@@ -127,7 +127,7 @@ in an LQ form, with a constant part which is not going to affect out lives in an
 \begin{equation}
 J_n^*(x) = x^T V_n x + v_n x + const\\
 V_n = (A + B K_n)^T V_{n-1} (A + B K_n) + Q + K^T R K \\
-v_n = 2 k_n^T B^T V_{n-1} (A + B K_n) + v_{n-1} + q + 2 k_n^T R K_n K_n
+v_n = 2 (k_n^T B^T + c^T) V_{n-1} (A + B K_n) + v_{n-1} (A + B K_n) + q + 2 k_n^T R K_n
 \end{equation}
 
 One minor thing we have to bear in mind is that, during the algebraic steps of we assume $V = (V + V^T) / 2$
@@ -163,7 +163,7 @@ By reparametrizing $x$ and $u$ respectively to $x - x_n^*$ and $u - u_n^*$, an a
   \text{where:} \quad \zeta_m = x_m - x_n^*, \nu_m = u_m - u_n^*
 \end{equation}
 
-The $(x_{n-1}^* - x_n^*)$ term is merely a constant, e.g. $c$, and the affine system is further simplified into:
+The $(x_{n-1}^* - x_n^*)$ term is merely a constant, e.g. $c$, and the affine system could be further simplified into:
 
 \begin{equation*}
   \zeta_{n-1} \approx c + A \zeta_n + B \nu_n \\
@@ -195,12 +195,12 @@ The $(x_{n-1}^* - x_n^*)$ term is merely a constant, e.g. $c$, and the affine sy
   A^\prime z_n + B^\prime \nu_n
 \end{equation}
 
-For the sake of brevity the following equation is used to represent the linear dynamical equation for the rest of
-this writing:
-
-\begin{equation}
+\begin{equation*}
   z_{n-1} = A^\prime z_n + B^\prime \nu_n
-\end{equation}
+\end{equation*}
+
+However, the optimal solution for a single LQR step is already calculated [[*Optimization Objective and Optimization Steps][here]] and we don't need this last step.
+
 
 ** Differentiation of $\overrightarrow{F} = M \overrightarrow{a}$
 

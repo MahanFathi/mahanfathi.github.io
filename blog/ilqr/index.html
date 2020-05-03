@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-02 Sat 13:38 -->
+<!-- 2020-05-04 Mon 00:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mahan Fathi</title>
@@ -379,12 +379,12 @@ following at each step:
 <p>
 However, solving for an arbitrary optimization problem at each step is computationally costly and unmanageable.
 The thing about LQR that makes it so popular is that it makes dynamic programming recursion painless, by applying
-the same analytical update at each step. This update is valid for a system with linear transition model and quadratic
+the same analytical update at each step. This update is valid for a system with linear transition model and linear-quadratic
 step-cost:
 </p>
 
 \begin{equation*}
-x_{i-1} = A x_i + B u_i \\
+x_{i-1} = c + A x_i + B u_i \\
 g(x, u) = x^T Q x + q x + u^T R u + r u
 \end{equation*}
 
@@ -397,7 +397,7 @@ Eventually, deploying LQ simplifications in equation (\ref{eq:dp}) yields:
 \min_{u_n} \quad    (x_{n-1}^T V_{n-1} x_{n-1} + v_{n-1} x_{n-1}) +
                     (x_n^T Q x_n + q x_n) +
                     (u_n^T R u_n + r u_n) \\
-\text{where:} \quad x_{n-1} = A x_n + B u_n
+\text{where:} \quad x_{n-1} = c + A x_n + B u_n
 \end{equation}
 
 <p>
@@ -407,8 +407,8 @@ the optimal control input:
 </p>
 
 \begin{equation}
-  \nabla_u [...] = 2 (A x + B u)^T V B + v B + 2 u^T R = 0 \\
-  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + B^T v^T = 0
+  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R = 0 \\
+  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T = 0
 \end{equation}
 
 <p>
@@ -417,7 +417,7 @@ So the control input is feedback-ish function of \(x_n\):
 
 \begin{equation}
 \label{eq:feedback}
-  u_n = (-(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A) x + -(2 B^T V_{n-1} B + 2 R)^{-1} B^T \\
+  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c) \\
   u_n = K_n x_n + k_n
 \end{equation}
 
@@ -429,7 +429,7 @@ in an LQ form, with a constant part which is not going to affect out lives in an
 \begin{equation}
 J_n^*(x) = x^T V_n x + v_n x + const\\
 V_n = (A + B K_n)^T V_{n-1} (A + B K_n) + Q + K^T R K \\
-v_n = 2 k_n^T B^T V_{n-1} (A + B K_n) + v_{n-1} + q + 2 k_n^T R K_n K_n
+v_n = 2 (k_n^T B^T + c^T) V_{n-1} (A + B K_n) + v_{n-1} (A + B K_n) + q + 2 k_n^T R K_n
 \end{equation}
 
 <p>
@@ -482,7 +482,7 @@ By reparametrizing \(x\) and \(u\) respectively to \(x - x_n^*\) and \(u - u_n^*
 \end{equation}
 
 <p>
-The \((x_{n-1}^* - x_n^*)\) term is merely a constant, e.g. \(c\), and the affine system is further simplified into:
+The \((x_{n-1}^* - x_n^*)\) term is merely a constant, e.g. \(c\), and the affine system could be further simplified into:
 </p>
 
 \begin{equation*}
@@ -515,16 +515,16 @@ The \((x_{n-1}^* - x_n^*)\) term is merely a constant, e.g. \(c\), and the affin
   A^\prime z_n + B^\prime \nu_n
 \end{equation}
 
-<p>
-For the sake of brevity the following equation is used to represent the linear dynamical equation for the rest of
-this writing:
-</p>
-
-\begin{equation}
+\begin{equation*}
   z_{n-1} = A^\prime z_n + B^\prime \nu_n
-\end{equation}
+\end{equation*}
+
+<p>
+However, the optimal solution for a single LQR step is already calculated <a href="#org764070e">here</a> and we don&rsquo;t need this last step.
+</p>
 </div>
 </div>
+
 
 <div id="outline-container-org69535f1" class="outline-3">
 <h3 id="org69535f1">Differentiation of \(\overrightarrow{F} = M \overrightarrow{a}\)</h3>
@@ -618,7 +618,7 @@ We also don&rsquo;t need to worry about \(V\) and \(v\), since differentiation z
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mahan Fathi Han Fathi</p>
-<p class="date">Created: 2020-05-02 Sat 13:38</p>
+<p class="date">Created: 2020-05-04 Mon 00:47</p>
 </div>
 </body>
 </html>
