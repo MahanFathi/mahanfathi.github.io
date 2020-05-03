@@ -229,7 +229,7 @@ timestemp:
 
 Differentiation in MuJoCo, for now, is possible only through finite difference. To see how this is exactly carried out,
 an official code sample can be found [[http://www.mujoco.org/book/source/derivative.cpp][here]]. After finding the primitive gradients, i.e. $\frac{\partial qacc}{\partial q}$,
-$\frac{\partial qacc}{\partial qvel}$, and $\frac{\partial qacc}{\partial ctrl} you can construct the $A$ and $B$ matrices:
+$\frac{\partial qacc}{\partial qvel}$, and $\frac{\partial qacc}{\partial ctrl}$ you can construct the $A$ and $B$ matrices:
 
 \begin{equation}
   A_{2nv, 2nv} =
