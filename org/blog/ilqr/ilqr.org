@@ -109,15 +109,15 @@ we also need to remember to make sure of that. By setting the gradient of $u_n$ 
 the optimal control input:
 
 \begin{equation}
-  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R = 0 \\
-  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T = 0
+  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R + r = 0 \\
+  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T + r^T = 0
 \end{equation}
 
 So the control input is feedback-ish function of $x_n$:
 
 \begin{equation}
 \label{eq:feedback}
-  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c) \\
+  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c + r^T) \\
   u_n = K_n x_n + k_n
 \end{equation}
 

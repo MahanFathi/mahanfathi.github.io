@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-04 Mon 02:27 -->
+<!-- 2020-05-07 Thu 13:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -366,8 +366,8 @@ the optimal control input:
 </p>
 
 \begin{equation}
-  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R = 0 \\
-  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T = 0
+  \nabla_u [...] = 2 (c + A x + B u)^T V B + v B + 2 u^T R + r = 0 \\
+  \implies \nabla_u^T [...] = 2 B^T V A x + (2 B^T V B + 2 R) u + 2 B^T V c + B^T v^T + r^T = 0
 \end{equation}
 
 <p>
@@ -376,7 +376,7 @@ So the control input is feedback-ish function of \(x_n\):
 
 \begin{equation}
 \label{eq:feedback}
-  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c) \\
+  u_n = -(2 B^T V_{n-1} B + 2 R)^{-1} 2 B^T V_{n-1} A x_n + -(2 B^T V_{n-1} B + 2 R)^{-1} (B^T v^T + 2 B^T V c + r^T) \\
   u_n = K_n x_n + k_n
 \end{equation}
 
@@ -577,7 +577,7 @@ We also don&rsquo;t need to worry about \(V\) and \(v\), since differentiation z
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Han Fathi</p>
-<p class="date">Created: 2020-05-04 Mon 02:27</p>
+<p class="date">Created: 2020-05-07 Thu 13:01</p>
 </div>
 </body>
 </html>
