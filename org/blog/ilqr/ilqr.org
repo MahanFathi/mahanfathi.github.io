@@ -1,4 +1,4 @@
-#+AUTHOR:    Han Fathi
+#+AUTHOR:    Mahan Fathi
 #+EMAIL:     mahan0fathi@gmail.com
 
 #+LATEX_CLASS: article
