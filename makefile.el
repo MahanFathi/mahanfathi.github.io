@@ -40,5 +40,6 @@
 
 (provide 'makefile)
 ;;; makefile.el ends here
+;;; run eval-buffer to make (SPC m e b)
 
 (org-publish-project "org")

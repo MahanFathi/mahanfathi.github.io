@@ -57,10 +57,7 @@ Inspired by the work of Todorov et al., implemented a fast Iterative LQG solver 
 #+end_verse
 *** Motion Mimic [Nov. 2017 to Jan. 2018]
 #+begin_verse
-Thanks to the readily available CMU MoCap, a bottom-half MuJoCo model of a bipedal is
-able to stably and naturally walk via *Generative Adversarial Imitation Learning(TRPO)*
-and stading punching motions are succesfuly mimiced for a humanoid using
-*DeepMimic(PPO)* in *Unity3D(ML-Agents)*.
+Thanks to the readily available CMU MoCap, a bottom-half MuJoCo model of a bipedal is able to stably and naturally walk via *Generative Adversarial Imitation Learning(TRPO)* and stading punching motions are succesfuly mimiced for a humanoid using *DeepMimic(PPO)* in *Unity3D(ML-Agents)*.
 #+end_verse
 *** Non-Holonomic Kinodynamic Motion Planning [May. 2017]
 #+begin_verse
@@ -80,7 +77,14 @@ Extracting the deep-seated spatial information of classification networks by Gui
 * Experince
 *** Team Leader at [[https://cafebazaar.ir/?l=en][CafeBazaar]] [Sep. 2019 _Ongoing_]
 #+begin_verse
-I currently lead a team of 6 responsible for all Computer Vision problems of [[https://balad.ir/about][Balad]] , which is the biggest domestic map and navigation application of Iran, a product of the Iranian tech giant, CafeBazaar.
+I am currently at [[https://balad.ir/about][Balad]] , the biggest domestic map and navigation application of Iran, a product of the Iranian tech giant, CafeBazaar.
+
+- Technical Leadership and Product Management of Data Infrastructure, a team of 7, responsible for attending to the data science needs of the map tribe (Sep. 2019 - Apr. 2020).
+
+- Team Leader of Augmented Reality team (Sep. 2019 - Ongoing).
+
+- Team Leader of ETA&Traffic, a team of Software Engineers and Data Scientists, concerned with ETA and Traffic (-__-) (Apr. 2020 - Ongoing).
+
 #+end_verse
 *** Senior Data Scientist at CafeBazaar [Oct. 2018 to Sep. 2019]
 #+begin_verse
@@ -105,8 +109,7 @@ The team tackled the problem of finding the near-optimal vanishing point for a s
 #+end_verse
 *** [[https://github.com/MahanFathi/OBJET][OBJET: A Computer Vision Graphical Sandbox]] [Feb. to Mar. 2020]
 #+begin_verse
-OBJET, is a graphical environment, developed in C++/OpenGL and accessible in Python via SWIG, to cater to the data needs of one willing to conduct research on computer vision in such domains.
-Load your own objects in a room, take a snapshot of the viewport, from the viewpoint of the customizable camera, and load it to python. This gives you the ability to create data on-the-fly, in your python data loader.
+OBJET, is a graphical environment, developed in C++/OpenGL and accessible in Python via SWIG, to cater to the data needs of one willing to conduct research on computer vision in such domains. Load your own objects in a room, take a snapshot of the viewport, from the viewpoint of the customizable camera, and load it to python. This gives you the ability to create data on-the-fly, in your python data loader.
 #+end_verse
 *** Road Extraction from Satellite Imagery [Jan. to Mar. 2020]
 #+begin_verse
@@ -166,7 +169,7 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 #+end_verse
 *** Programming
 #+begin_verse
-- Long programming experience in C++, Python, JavaScript, Lua, and Java
+- Long programming experience in C++, Python, JavaScript, Lua, Java, and Unix Evironment
 - TensorFlow, PyTorch/Torch, Caffe, and Keras for Deep Learning Frameworks
 - MuJoCo, Unity, and Bullet for Physics + OpenGL and Blender for Graphics
 - Experienced in C#, ROS, SQL, OpenGL, Redis and Spark
@@ -229,8 +232,8 @@ Introduction to Mechanics, Electrodynamics and Differential Equations.
 | *Robotics and Character Animation* | *Machine Learning*      | *Software Engineering*       | *Cool Stuff*      |
 |------------------------------------+-------------------------+------------------------------+-------------------|
 | Bipedal Locomotion                 | Reinforcement Learning  | Backend Development          | Game Development  |
-| Agile Gaits for Quadrupeds         | Optimization Algorithms | Machine Learning Engineering | Augmented Reality |
+| Agile Gaits for Quadrupeds         | Optimization Algorithms | Operating Systems <3         | Augmented Reality |
 | Hierarchical Planning and Control  | Computer Vision         | Microservices                | Virtual Reality   |
-| Kinematic Character Animation      | Computer Graphics       | Beautiful Architectures      | Exotic Editors    |
+| Kinematic Character Animation      | Computer Graphics       | Machine Learning Engineering | Exotic Editors    |
 | Self-driving cars                  | Rethinking Neural Nets  | C/C++!                       | Free Software     |
 |------------------------------------+-------------------------+------------------------------+-------------------|
