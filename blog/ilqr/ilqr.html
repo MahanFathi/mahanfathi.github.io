@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-07-04 Sat 03:03 -->
+<!-- 2020-09-15 Tue 13:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -247,26 +247,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga55b375">1. Intro</a></li>
-<li><a href="#orgf5ab574">2. Problem Setting</a>
+<li><a href="#org86f3186">1. Intro</a></li>
+<li><a href="#org8394334">2. Problem Setting</a>
 <ul>
-<li><a href="#org55c0fe4">2.1. Initialization and Notation</a></li>
-<li><a href="#orgcf85f43">2.2. Optimization Objective and Optimization Steps</a></li>
+<li><a href="#org939e292">2.1. Initialization and Notation</a></li>
+<li><a href="#orgbda761b">2.2. Optimization Objective and Optimization Steps</a></li>
 </ul>
 </li>
-<li><a href="#org8a56f7b">3. Nonlinearities</a>
+<li><a href="#orga1d708a">3. Nonlinearities</a>
 <ul>
-<li><a href="#org77b9daf">3.1. Linearization of Dynamics</a></li>
-<li><a href="#orga1e3c3e">3.2. Differentiation of \(\overrightarrow{F} = M \overrightarrow{a}\)</a></li>
-<li><a href="#orgd5325da">3.3. Approximation of Cost</a></li>
+<li><a href="#org6e7f107">3.1. Linearization of Dynamics</a></li>
+<li><a href="#org3b3f278">3.2. Differentiation of \(\overrightarrow{F} = M \overrightarrow{a}\)</a></li>
+<li><a href="#orgb1a1173">3.3. Approximation of Cost</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga55b375" class="outline-2">
-<h2 id="orga55b375"><span class="section-number-2">1</span> Intro</h2>
+<div id="outline-container-org86f3186" class="outline-2">
+<h2 id="org86f3186"><span class="section-number-2">1</span> Intro</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 iLQR is an algorithm for trajectory optimization of nonlinear systems. It is actually quite hard
@@ -281,12 +281,12 @@ to a garbage. I advice taking a look at these great resources:
 </div>
 </div>
 
-<div id="outline-container-orgf5ab574" class="outline-2">
-<h2 id="orgf5ab574"><span class="section-number-2">2</span> Problem Setting</h2>
+<div id="outline-container-org8394334" class="outline-2">
+<h2 id="org8394334"><span class="section-number-2">2</span> Problem Setting</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org55c0fe4" class="outline-3">
-<h3 id="org55c0fe4"><span class="section-number-3">2.1</span> Initialization and Notation</h3>
+<div id="outline-container-org939e292" class="outline-3">
+<h3 id="org939e292"><span class="section-number-3">2.1</span> Initialization and Notation</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 iLQR is firstly initialized with some dynamically feasible trajectory &#x2013; this could be merely
@@ -310,8 +310,8 @@ come from direct execution of actions and collection of states, on the model.
 </div>
 
 
-<div id="outline-container-orgcf85f43" class="outline-3">
-<h3 id="orgcf85f43"><span class="section-number-3">2.2</span> Optimization Objective and Optimization Steps</h3>
+<div id="outline-container-orgbda761b" class="outline-3">
+<h3 id="orgbda761b"><span class="section-number-3">2.2</span> Optimization Objective and Optimization Steps</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 The ultimate goal is to solve for the following trajectory optimization problem:
@@ -400,8 +400,8 @@ or in other words, \(V\) is symmetric.
 </div>
 
 
-<div id="outline-container-org8a56f7b" class="outline-2">
-<h2 id="org8a56f7b"><span class="section-number-2">3</span> Nonlinearities</h2>
+<div id="outline-container-orga1d708a" class="outline-2">
+<h2 id="orga1d708a"><span class="section-number-2">3</span> Nonlinearities</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The problem however is, that neither a linear model nor a linear-quadratic step-cost function is associated with
@@ -411,8 +411,8 @@ a valid \((x_n, u_n, x_{n-1})\) tuple and try to improve the resulted trajectory
 </div>
 
 
-<div id="outline-container-org77b9daf" class="outline-3">
-<h3 id="org77b9daf"><span class="section-number-3">3.1</span> Linearization of Dynamics</h3>
+<div id="outline-container-org6e7f107" class="outline-3">
+<h3 id="org6e7f107"><span class="section-number-3">3.1</span> Linearization of Dynamics</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 To be able to work with linear dynamics, the equations of motion, i.e. \(x_{n-1}^* = f(x_n^*, u_n^*)\) need to
@@ -479,14 +479,14 @@ The \((x_{n-1}^* - x_n^*)\) term is merely a constant, e.g. \(c\), and the affin
 \end{equation*}
 
 <p>
-However, the optimal solution for a single LQR step is already calculated <a href="#orgcf85f43">here</a> and we don&rsquo;t need this last step.
+However, the optimal solution for a single LQR step is already calculated <a href="#orgbda761b">here</a> and we don&rsquo;t need this last step.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orga1e3c3e" class="outline-3">
-<h3 id="orga1e3c3e"><span class="section-number-3">3.2</span> Differentiation of \(\overrightarrow{F} = M \overrightarrow{a}\)</h3>
+<div id="outline-container-org3b3f278" class="outline-3">
+<h3 id="org3b3f278"><span class="section-number-3">3.2</span> Differentiation of \(\overrightarrow{F} = M \overrightarrow{a}\)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 To get the \(A\) and \(B\) matrices we need to differentiate the dynamics of equations. Adhering to MuJoCo notation,
@@ -536,8 +536,8 @@ an official code sample can be found <a href="http://www.mujoco.org/book/source/
 </div>
 </div>
 
-<div id="outline-container-orgd5325da" class="outline-3">
-<h3 id="orgd5325da"><span class="section-number-3">3.3</span> Approximation of Cost</h3>
+<div id="outline-container-orgb1a1173" class="outline-3">
+<h3 id="orgb1a1173"><span class="section-number-3">3.3</span> Approximation of Cost</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 For the cost function \(g\) we can follow the same drill, with the only difference that this time we are going to calculate
@@ -577,7 +577,7 @@ We also don&rsquo;t need to worry about \(V\) and \(v\), since differentiation z
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mahan Fathi</p>
-<p class="date">Created: 2020-07-04 Sat 03:03</p>
+<p class="date">Created: 2020-09-15 Tue 13:29</p>
 </div>
 </body>
 </html>

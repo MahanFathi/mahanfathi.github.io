@@ -2,10 +2,10 @@
 
 - [[file:index.org][Mahan Fathi]]
 - blog
-  - [[file:blog/index.org][index]]
+  - [[file:blog/index.org][Mahan Fathi]]
   - ilqr
-    - [[file:blog/ilqr/ilqr.org][Notes on iLQR]]
-    - [[file:blog/ilqr/index.org][index]]
+    - [[file:blog/ilqr/index.org][Mahan Fathi]]
+    - [[file:blog/ilqr/ilqr.org][ilqr]]
 - cv
-  - [[file:cv/cv.org][CV: Mahan Fathi]]
-  - [[file:cv/index.org][index]]
+  - [[file:cv/index.org][Mahan Fathi]]
+  - [[file:cv/cv.org][cv]]

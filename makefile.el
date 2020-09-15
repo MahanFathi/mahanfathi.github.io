@@ -3,7 +3,7 @@
 ;;; Commentary:
 ;;; acts like a makefile
 
-;;; for latex tikz png exports (i know lazy, programming)
+;;; for latex tikz png exports (i know, lazy programming)
 (defmacro by-backend (&rest body)
   `(case (if (boundp 'backend) (org-export-backend-name backend) nil) ,@body))
 
