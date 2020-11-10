@@ -102,7 +102,12 @@ Among the biggest Iranian tech companies, TAPSI is a ride-hailing platform with 
 -----
 
 * Projects
-*** AR Navigation [Jul. 2019 _Ongoing_]
+*** Redesigning Balad's Traffic Infrastructure [Jun. to Oct. 2020]
+#+begin_verse
+Live Traffic: Cutting down on computational resources and improvement on LiveTraffic accuracy by a huge factor. We use Apache Kafka and Flink for serving and streaming the location data.
+Typical Traffic: A more sluggish inference for traffic inferred from historical data.
+#+end_verse
+*** AR Navigation [Jul. 2019 to Aug. 2020]
 #+begin_verse
 Providing users with an Augmented Reality driven experience for navigation.
 The team tackled the problem of finding the near-optimal vanishing point for a sequence of input images and depiction of graphical instructions accordingly, from OpenGL scratch. For now, the system is embedded in Balad running on Android phones.
@@ -169,10 +174,10 @@ Implementation of the algorithm as the owner of the project, which resulted in a
 #+end_verse
 *** Programming
 #+begin_verse
-- Long programming experience in C++, Python, JavaScript, Lua, Java, and Unix Evironment
+- Long programming experience in C++, Python, C, JavaScript, Java, Go, Lisp, Lua, and Unix Evironment
 - TensorFlow, PyTorch/Torch, Caffe, and Keras for Deep Learning Frameworks
 - MuJoCo, Unity, and Bullet for Physics + OpenGL and Blender for Graphics
-- Experienced in C#, ROS, SQL, OpenGL, Redis and Spark
+- Experienced in C#, ROS, SQL, Redis and Spark
 - Familiarity with a number of nonlinear/convex optimization packages
 #+end_verse
 *** Other
